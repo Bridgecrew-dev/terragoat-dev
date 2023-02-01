@@ -93,6 +93,9 @@ resource "azurerm_postgresql_server" "example" {
     git_repo             = "terragoat"
     yor_trace            = "9eae126d-9404-4511-9c32-2243457df459"
   }
+  threat_detection_policy {
+    enabled = true
+  }
 }
 
 resource "azurerm_postgresql_configuration" "thrtottling_config" {

@@ -77,12 +77,12 @@ resource "azurerm_postgresql_server" "example" {
   sku_name                     = "B_Gen5_2"
   storage_mb                   = 5120
   backup_retention_days        = 7
-  geo_redundant_backup_enabled = false
+  geo_redundant_backup_enabled = true
   auto_grow_enabled            = true
   administrator_login          = "terragoat"
   administrator_login_password = "Aa12345678"
   version                      = "9.5"
-  ssl_enforcement_enabled      = false
+  ssl_enforcement_enabled      = true
   tags = {
     git_commit           = "81738b80d571fa3034633690d13ffb460e1e7dea"
     git_file             = "terraform/azure/sql.tf"
@@ -93,6 +93,12 @@ resource "azurerm_postgresql_server" "example" {
     git_repo             = "terragoat"
     yor_trace            = "9eae126d-9404-4511-9c32-2243457df459"
   }
+  ssl_minimal_tls_version_enforced = "TLS1_2"
+  infrastructure_encryption_enabled = true
+  threat_detection_policy {
+    enabled = true
+  }
+  public_network_access_enabled = false
 }
 
 resource "azurerm_postgresql_configuration" "thrtottling_config" {

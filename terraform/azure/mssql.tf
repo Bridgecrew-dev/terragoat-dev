@@ -34,6 +34,7 @@ resource "azurerm_mssql_server" "mssql1" {
     git_repo             = "terragoat"
     yor_trace            = "54f6cb23-b30a-4f1d-8064-6f777b9b75db"
   }
+  minimum_tls_version = "1.2"
 }
 
 resource "azurerm_mssql_server" "mssql2" {
@@ -53,6 +54,7 @@ resource "azurerm_mssql_server" "mssql2" {
     git_repo             = "terragoat"
     yor_trace            = "096d2cf2-6d47-41b2-9418-cdedea85e184"
   }
+  minimum_tls_version = "1.2"
 }
 
 resource "azurerm_mssql_server" "mssql3" {
@@ -110,6 +112,7 @@ resource "azurerm_mssql_server" "mssql5" {
     git_repo             = "terragoat"
     yor_trace            = "0240ca84-acc9-47d9-b491-9e7e359787a1"
   }
+  minimum_tls_version = "1.2"
 }
 
 resource "azurerm_mssql_server" "mssql6" {

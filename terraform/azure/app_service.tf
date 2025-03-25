@@ -38,6 +38,8 @@ resource azurerm_app_service "app-service1" {
     git_repo             = "terragoat"
     yor_trace            = "13be096d-c599-46e5-bf54-51c6e9732858"
   }
+  identity = true
+  client_cert_enabled = true
 }
 
 resource azurerm_app_service "app-service2" {

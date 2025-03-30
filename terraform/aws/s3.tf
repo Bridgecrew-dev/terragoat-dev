@@ -22,6 +22,10 @@ resource "aws_s3_bucket" "data" {
   })
 }
 
+resource "aws_s3_bucket_object" "my_blanc" {
+}
+
+
 resource "aws_s3_bucket_object" "data_object" {
   bucket = aws_s3_bucket.data.id
   key    = "customer-master.xlsx"
@@ -56,7 +60,7 @@ resource "aws_s3_bucket" "financials" {
     }, {
     git_commit           = "5c6b5d60a8aa63a5d37e60f15185d13a967f0542"
     git_file             = "terraform/aws/s3.tf"
-    git_last_modified_at = "2021-05-02 10:06:10"
+    git_last_modified_at = "2021-05-02 11:06:10"
     git_last_modified_by = "nimrodkor@users.noreply.github.com"
     git_modifiers        = "jonjozwiak/nimrodkor/schosterbarak"
     git_org              = "Bridgecrew-dev"

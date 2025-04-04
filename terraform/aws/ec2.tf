@@ -31,6 +31,7 @@ EOF
     }, {
     yor_name = "web_host"
   })
+  monitoring = true
 }
 
 resource "aws_ebs_volume" "web_host_storage" {
